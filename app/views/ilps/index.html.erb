@@ -1,0 +1,35 @@
+<h1>Listing ilps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Title</th>
+      <th>Object</th>
+      <th>Finality</th>
+      <th>Scope</th>
+      <th>Subject</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ilps.each do |ilp| %>
+      <tr>
+        <td><%= ilp.user_id %></td>
+        <td><%= ilp.title %></td>
+        <td><%= ilp.object %></td>
+        <td><%= ilp.finality %></td>
+        <td><%= ilp.scope %></td>
+        <td><%= ilp.subject %></td>
+        <td><%= link_to 'Show', ilp %></td>
+        <td><%= link_to 'Edit', edit_ilp_path(ilp) %></td>
+        <td><%= link_to 'Destroy', ilp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ilp', new_ilp_path %>

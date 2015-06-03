@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @propuestum.user_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @propuestum.title %>
+</p>
+
+<p>
+  <strong>Object:</strong>
+  <%= @propuestum.object %>
+</p>
+
+<p>
+  <strong>Finality:</strong>
+  <%= @propuestum.finality %>
+</p>
+
+<p>
+  <strong>Scope:</strong>
+  <%= @propuestum.scope_id %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @propuestum.subject_id %>
+</p>
+
+<%= link_to 'Edit', edit_propuestum_path(@propuestum) %> |
+<%= link_to 'Back', propuesta_path %>

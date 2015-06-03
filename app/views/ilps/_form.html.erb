@@ -1,0 +1,41 @@
+<%= form_for(@ilp) do |f| %>
+  <% if @ilp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ilp.errors.count, "error") %> prohibited this ilp from being saved:</h2>
+
+      <ul>
+      <% @ilp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :object %><br>
+    <%= f.text_field :object %>
+  </div>
+  <div class="field">
+    <%= f.label :finality %><br>
+    <%= f.text_field :finality %>
+  </div>
+  <div class="field">
+    <%= f.label :scope %><br>
+    <%= f.text_field :scope %>
+  </div>
+  <div class="field">
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

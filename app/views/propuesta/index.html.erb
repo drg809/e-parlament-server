@@ -1,0 +1,35 @@
+<h1>Listing propuesta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Title</th>
+      <th>Object</th>
+      <th>Finality</th>
+      <th>Scope</th>
+      <th>Subject</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @propuesta.each do |propuestum| %>
+      <tr>
+        <td><%= propuestum.user_id %></td>
+        <td><%= propuestum.title %></td>
+        <td><%= propuestum.object %></td>
+        <td><%= propuestum.finality %></td>
+        <td><%= propuestum.scope_id %></td>
+        <td><%= propuestum.subject_id %></td>
+        <td><%= link_to 'Show', propuestum %></td>
+        <td><%= link_to 'Edit', edit_propuestum_path(propuestum) %></td>
+        <td><%= link_to 'Destroy', propuestum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Propuestum', new_propuestum_path %>

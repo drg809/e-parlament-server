@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @ilp.user_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ilp.title %>
+</p>
+
+<p>
+  <strong>Object:</strong>
+  <%= @ilp.object %>
+</p>
+
+<p>
+  <strong>Finality:</strong>
+  <%= @ilp.finality %>
+</p>
+
+<p>
+  <strong>Scope:</strong>
+  <%= @ilp.scope %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @ilp.subject %>
+</p>
+
+<%= link_to 'Edit', edit_ilp_path(@ilp) %> |
+<%= link_to 'Back', ilps_path %>
